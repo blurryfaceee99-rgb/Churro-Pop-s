@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Churro Pop's - Nuestro Producto</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Tipografía elegante -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+ <!-- Favicon (logo de la pestaña) -->
+    <link rel="icon" type="image/png" href="LOGOCHURROSSS.png">
+    <link rel="shortcut icon" href="LOGOCHURROSSSS.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="LOGOCHURROSSS.png">
+<style>
+/* Reset básico */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(180deg, #FFECEF 0%, #FFD6E0 100%);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Contenedor central */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Imagen destacada con efecto */
+.hero img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(227,138,174,0.3);
+    margin-bottom: 40px;
+    transform: scale(0.95);
+    animation: fadeZoom 1.5s ease forwards;
+}
+
+/* Animación fade + zoom */
+@keyframes fadeZoom {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Títulos principales */
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    color: #E38AAE;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: fadeIn 1s ease 0.5s forwards;
+}
+
+/* Línea decorativa */
+.hero .divider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #F8C8DC, #E38AAE);
+    border-radius: 2px;
+    margin: 20px auto 40px;
+    opacity: 0;
+    animation: fadeIn 1s ease 0.8s forwards;
+}
+
+/* Párrafos */
+.hero p {
+    max-width: 700px;
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.1s forwards;
+}
+
+/* Botón principal */
+.hero a.button, .hero .button, .cart button {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(135deg, #F8C8DC 0%, #E38AAE 100%);
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(227,138,174,0.3);
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.4s forwards;
+}
+
+.hero a.button:hover, .hero .button:hover, .cart button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(227,138,174,0.4);
+}
+
+/* Dropdown (Menú de selección de churro) */
+.select-wrapper {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.select-wrapper select {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    background: #fff;
+    border: 1px solid #E38AAE;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(227,138,174,0.2);
+    transition: all 0.3s ease;
+}
+
+.select-wrapper select:hover {
+    border-color: #F8C8DC;
+    cursor: pointer;
+}
+
+/* Carrito de compra */
+.cart {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #E38AAE;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(227, 138, 174, 0.4);
+    display: none;
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.cart.show {
+    display: block;
+}
+
+.cart p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.cart .button {
+    margin-top: 10px;
+}
+
+/* Galería de imágenes nutrimentales */
+.nutri-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease 1.6s forwards;
+}
+
+.nutri-gallery img {
+    width: 400px; /* ahora mucho más grande */
+    max-width: 100%; /* se adapta a pantallas pequeñas */
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(227,138,174,0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.nutri-gallery img:hover {
+    transform: translateY(-8px) scale(1.08);
+    box-shadow: 0 20px 40px rgba(227,138,174,0.5);
+}
+
+/* Animación fade-in */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilo del botón "Volver a página principal" fijo en la parte inferior */
+.bottom-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(135deg, #F8C8DC 0%, #E38AAE 100%);
+    box-shadow: 0 8px 20px rgba(227,138,174,0.3);
+    transition: all 0.3s ease;
+    z-index: 9999;
+}
+
+.bottom-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(227,138,174,0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 36px; }
+    .hero p { font-size: 16px; }
+    .hero img { max-width: 80%; }
+    .nutri-gallery {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .nutri-gallery img {
+        width: 95%; /* mucho más grande en móvil */
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="hero">
+    <img src="CAJA.jpeg" alt="Caja de Churros Pop's">
+    <h1>Nuestro Producto</h1>
+    <div class="divider"></div>
+    <p>
+        Churro Pop’s, una propuesta innovadora ubicada en Fresnillo, Zacatecas, que busca transformar la manera en que disfrutamos este clásico postre. Nuestra idea rompe con el formato convencional del churro alargado para presentar "bolitas de churro": pequeños bocados crujientes por fuera y suaves por dentro, con sabores adicionales y únicos, colores llamativos, con toppings e ingredientes frescos como la fruta de temporada y un proceso de producción cuidadoso que garantiza sabor, textura y frescura en cada bocado.
+        <br><br>
+        <strong>Empaque:</strong> El producto se empaca en una caja de cartón que mantiene la textura crujiente de los churros, con papel encerado para evitar filtraciones de grasa. La tapa tiene plástico transparente para visualizar el producto, garantizando higiene y practicidad. El material es ecológico y reciclable. Además, incluye nuestro etiquetado con normativas y branding para confianza y reconocimiento del cliente.
+    </p>
+
+    <!-- Menú de selección de churro -->
+    <div class="select-wrapper">
+        <select id="flavorSelect">
+            <option value="naranja">Churro Pop's Naranja</option>
+            <option value="almendra">Churro Pop's Almendra</option>
+            <option value="nuez">Churro Pop's Nuez</option>
+        </select>
+    </div>
+
+    <!-- Botón para agregar al carrito -->
+    <button class="button" onclick="addToCart()">Agregar al carrito ($65 MXN)</button>
+</div>
+
+<!-- Carrito de compras -->
+<div class="cart" id="cart">
+    <p id="cartDetails">1 Producto en el carrito - $65 MXN</p>
+    <button class="button" onclick="checkout()">Proceder a la compra</button>
+</div>
+
+<!-- Sección de Información Nutrimental -->
+<div class="hero">
+    <h1>Información Nutrimental</h1>
+    <div class="divider"></div>
+
+    <div class="nutri-gallery">
+        <img src="nutri1.jpeg" alt="Tabla nutrimental 1">
+        <img src="nutri2.jpeg" alt="Tabla nutrimental 2">
+        <img src="nutri3.jpeg" alt="Tabla nutrimental 3">
+    </div>
+</div>
+
+
+
+
+<!-- Script para manejar el carrito -->
+<script>
+let cartVisible = false;
+
+function addToCart() {
+    const selectedFlavor = document.getElementById('flavorSelect').value;
+    cartVisible = true;
+    document.getElementById('cart').classList.add('show');
+    document.getElementById('cartDetails').textContent = `1 ${selectedFlavor} en el carrito - $65 MXN`;
+}
+
+function checkout() {
+    alert("¡Gracias por tu compra! Pronto recibirás los detalles.");
+    // Aquí se puede integrar un proceso de pago real
+}
+</script>
+
+</body>
+</html>

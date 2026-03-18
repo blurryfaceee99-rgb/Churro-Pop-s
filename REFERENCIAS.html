@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <!-- Favicon (logo de la pestaña) -->
+    <link rel="icon" type="image/png" href="LOGOCHURROSSS.png">
+    <link rel="shortcut icon" href="LOGOCHURROSSSS.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="LOGOCHURROSSS.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opiniones sobre Churro Pop's</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(180deg, #FFECEF 0%, #FFD6E0 100%);
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #E38AAE;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .review {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+        }
+
+        .review:last-child {
+            border-bottom: none;
+        }
+
+        .user-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .rating {
+            margin-top: 5px;
+        }
+
+        .star {
+            color: #F8C8DC;
+        }
+
+        .review-text {
+            font-size: 16px;
+            color: #555;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        .review-text strong {
+            color: #E38AAE;
+        }
+
+        /* Estilo de los botones */
+        .button {
+            display: inline-block;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 500;
+            color: #fff;
+            background: linear-gradient(135deg, #F8C8DC 0%, #E38AAE 100%);
+            text-decoration: none;
+            box-shadow: 0 8px 20px rgba(227,138,174,0.3);
+            transition: all 0.3s ease;
+            text-align: center;
+            margin-top: 30px;
+            display: block;
+        }
+
+        .button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 25px rgba(227,138,174,0.4);
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            .review-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Opiniones sobre Churro Pop's</h1>
+
+    <!-- Opiniones de los usuarios -->
+    <div class="review">
+        <div class="user-name">Juan Pérez</div>
+        <div class="rating">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+        </div>
+        <div class="review-text">¡Increíbles churros! Super frescos y con un sabor delicioso, totalmente recomendados. ¡Definitivamente volveré por más!</div>
+    </div>
+
+    <div class="review">
+        <div class="user-name">Ana González</div>
+        <div class="rating">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+        </div>
+        <div class="review-text">Me encantaron los churros. El sabor es único y tienen una textura perfecta. ¡Un 10/10!</div>
+    </div>
+
+    <div class="review">
+        <div class="user-name">Carlos Martínez</div>
+        <div class="rating">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+        </div>
+        <div class="review-text">Los mejores churros que he probado. El topping de fruta es una excelente idea. ¡Muy sabrosos!</div>
+    </div>
+
+    <div class="review">
+        <div class="user-name">Sofía López</div>
+        <div class="rating">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+        </div>
+        <div class="review-text">¡Exquisito! Muy crujientes por fuera y suaves por dentro. Los sabores son increíbles. Muy recomendable.</div>
+    </div>
+
+    <div class="review">
+        <div class="user-name">Luis Hernández</div>
+        <div class="rating">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+        </div>
+        <div class="review-text">Me encantaron los churros. Muy bien presentados y sabrosos. El packaging también es muy bueno.</div>
+    </div>
+
+    <!-- Opiniones con 4 estrellas -->
+    <div class="review">
+        <div class="user-name">María Rodríguez</div>
+        <div class="rating">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+        </div>
+        <div class="review-text">Muy ricos, pero me gustaría que estuvieran un poquito más crujientes. Aún así, muy buenos.</div>
+    </div>
+
+    <div class="review">
+        <div class="user-name">Pedro Ruiz</div>
+        <div class="rating">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+        </div>
+        <div class="review-text">El sabor es delicioso, pero sentí que se me hizo un poco pesado después de comer varios. Sin embargo, los recomendaría.</div>
+    </div>
+
+    <!-- Resto de usuarios -->
+    <div class="review">
+        <div class="user-name">Laura Jiménez</div>
+        <div class="rating">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+        </div>
+        <div class="review-text">Me encantaron. Muy buen sabor, frescura y el precio es justo. ¡Los probaré otra vez!</div>
+    </div>
+
+    <div class="review">
+        <div class="user-name">Felipe Castro</div>
+        <div class="rating">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+        </div>
+        <div class="review-text">Es una experiencia diferente con estos churros. Muy ricos y con sabores novedosos. ¡Me encantaron!</div>
+    </div>
+
+    <!-- Opiniones 4 estrellas -->
+    <div class="review">
+        <div class="user-name">Cristina Sánchez</div>
+        <div class="rating">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+        </div>
+        <div class="review-text">Los churros estaban muy buenos, pero un poco más de variedad en los toppings sería excelente.</div>
+    </div>
+
+    <div class="review">
+        <div class="user-name">Miguel Díaz</div>
+        <div class="rating">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+        </div>
+        <div class="review-text">Muy buenos, pero prefiero que estén más calientes. Aún así, volvería a comprar.</div>
+    </div>
+
+    <div class="review">
+        <div class="user-name">Elena García</div>
+        <div class="rating">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+        </div>
+        <div class="review-text">Son muy buenos, aunque un poco dulces para mi gusto. Los toppings están muy bien.</div>
+    </div>
+
+    <div class="review">
+        <div class="user-name">Jorge Martínez</div>
+        <div class="rating">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+        </div>
+        <div class="review-text">La textura de los churros es excelente, pero me gustaría que el sabor fuera un poco más intenso.</div>
+    </div>
+
+    <div class="review">
+        <div class="user-name">Patricia López</div>
+        <div class="rating">
+            <span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span><span class="star">⭐</span>
+        </div>
+        <div class="review-text">Muy buenos churros, aunque los precios podrían ser un poco más bajos.</div>
+    </div>
+
+    <a href="pagchurros.html" class="button">Volver a la tienda</a>
+</div>
+
+</body>
+</html>
